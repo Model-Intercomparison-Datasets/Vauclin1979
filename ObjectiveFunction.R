@@ -47,6 +47,20 @@ Obj.plot <- function(jobid=0, iGen=0,
   hydroGOF::ggof(obs=obs, sim=sim)
   dev.off()
 }
+fun.interp <- function(xo, xs){
+  grp = sort(unique(xo[,3]))
+  ng=length(grp)
+  ret = cbind(xo[, 1:2], 0)
+  for(i in 1:ng){
+    id=which(xo[,3] == grp[i])
+    tmp=approx(xs[,1], xs[,1+i], xout = xo[id,1], method = 'linear')
+    ret[id,3] = tmp$y
+  }
+  colnames(ret) = c('x', 'obs', 'sim')
+  return(ret)
+}
+
+
 Obj.Func <- function(jobid=0, iGen=0,
                      inpath, outpath, 
                      CV, vlist,  outdir = CV$method$path_out){
@@ -61,18 +75,7 @@ Obj.Func <- function(jobid=0, iGen=0,
   
   obs=readRDS(file = 'Vauclin1979.RDS')
   xobs = data.frame(x=obs[,1], z=2-obs[,2], col=obs[,3])
-  fun.interp <- function(xo, xs){
-    grp = sort(unique(xo[,3]))
-    ng=length(grp)
-    ret = cbind(xo[, 1:2], 0)
-    for(i in 1:ng){
-      id=which(xo[,3] == grp[i])
-      tmp=approx(xs[,1], xs[,1+i], xout = xo[id,1], method = 'linear')
-      ret[id,3] = tmp$y
-    }
-    colnames(ret) = c('x', 'obs', 'sim')
-    return(ret)
-  }
+ 
   gw=readout('eleygw')
   tid=time(gw)[1] + (seq(2, 8, 2)+0)*3600
   if(max(time(gw)) < max(time(gw))){
