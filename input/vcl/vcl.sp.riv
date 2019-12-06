@@ -1,0 +1,6 @@
+1	6
+Index	Down	Type	Slope	Length	BC
+1	-3	1	0	0.4	1
+1	9
+Index	Depth	BankSlope	Width	Sinuosity	Manning	Cwr	KsatH	BedThick
+1	2	0	2	1	4.63e-07	0.6	8.4	0.001

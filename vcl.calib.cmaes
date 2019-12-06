@@ -1,0 +1,11 @@
+lambda 24
+ncores	12
+maxgen	100
+stopfitness	0.02
+sigma	0.5
+updateic	0
+nspingup	365
+walltime	18000
+BESTGOF 0.0
+tsd_obs	xxx
+path_out	cmaes_out

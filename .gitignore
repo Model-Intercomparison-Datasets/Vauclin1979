@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rout
+test*.R
+shud
+*.log
+cmaes_out*
+
