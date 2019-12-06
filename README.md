@@ -33,8 +33,9 @@ The R scripts include:
 1. Build the Vauclin experiment
 2. Generate the physical and model parameters
 3. Run simulations.
-4. Visulize results
-5. Compare the result with Vauclin measurements.
+4. CMAES calibration again Vauclin's experiment.
+5. Visulize results
+6. Compare the result with Vauclin measurements.
 
 
 
