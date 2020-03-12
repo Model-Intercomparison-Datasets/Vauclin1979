@@ -1,6 +1,6 @@
 # Vauclin (1979) experiment with SHUD mdoel
 
-***SHUD - Solver of Hydrological Unstructured Domain.*** 
+***SHUD - Simulator of Hydrological Unstructured Domain.*** 
 
 Website: [www.shud.xyz](www.shud.xyz)
 
@@ -14,7 +14,7 @@ Vauclin's experiment \citep{Vauclin1979} is designed to assess groundwater table
 
 The experiment's initial condition is an equilibrium water table under constant hydraulic head from the right side.  That is, the saturated water table across the sandbox was kept stable at $0.65$ m. When the groundwater table reached equilibrium, irrigation was initiated at $t = 0$.  The groundwater table was then measured at 2, 4, 6, and 8 hours at several locations along the length of the box.
 
-\citep{Vauclin1979} also use 2-D (vertical and horizontal) numeric model to simulate the soil moisture and groundwater table. The maximum bias between measurement and simulation was $5.2 cm​$, according to the value of digitalized in \citealp[Fig. 10]{Vauclin1979}. 
+\citep{Vauclin1979} also use 2-D (vertical and horizontal) numeric model to simulate the soil moisture and groundwater table. The maximum bias between measurement and simulation was $5.2 cm$, according to the value of digitalized in \citealp[Fig. 10]{Vauclin1979}. 
 
 ![res](Ref/v1.png)
 
@@ -22,7 +22,7 @@ Besides the parameters specified in \citep{Vauclin1979}, additional information 
 
 This mismatch may be due to (1) the aquifer description of unsaturated and saturated layers limiting the capability to simulate infiltration and recharge in the unsaturated zone, or (2) the horizontal unsaturated flow assumptions no longer hold at the relatively  microscopic scales of this experiment.
 
-The SHUD simulated the groundwater table at all four measurement points (see Fig. \ref{fig:vauclin}(b).  The maximum bias between simulation and Vauclin's observations is $ 5.5cm$, with $R^2$ = $0.99$, that is comparable to the bias $5.2 cm$ of numerical simulation in \citep{Vauclin1979}. When the calibration takes more soil parameters into account, the bias in simulation decreases to  $3 cm​$. Certainly, the simplifications employed by SHUD for the unsaturated and saturated zone benefits the computation efficiency while limiting the applicability of the model for micro-scale problems.
+The SHUD simulated the groundwater table at all four measurement points (see Fig. \ref{fig:vauclin}(b).  The maximum bias between simulation and Vauclin's observations is $ 5.5cm$, with $R^2$ = $0.99$, that is comparable to the bias $5.2 cm$ of numerical simulation in \citep{Vauclin1979}. When the calibration takes more soil parameters into account, the bias in simulation decreases to  $3 cm$. Certainly, the simplifications employed by SHUD for the unsaturated and saturated zone benefits the computation efficiency while limiting the applicability of the model for micro-scale problems.
 
 The simulations, compared against Vauclin's experiment, validate the algorithm for infiltration, recharge, and lateral groundwater flow.  More reliable vertical flow within unsaturated layer requires multiple layers, which is planned in next version of SHUD.
 
@@ -51,5 +51,5 @@ The R scripts include:
 
 ## Policy
 
-The script and data are open access for any purposes. I would be most grateful if you could send me an email (at lele.shu@gmail.com) when they helps you.
+The script and data are open access for any purposes. I would be most grateful if you could send me an email (at lele.shu@gmail.com) when they help you.
 

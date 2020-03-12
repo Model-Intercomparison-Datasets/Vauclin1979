@@ -74,7 +74,7 @@ Obj.Func <- function(jobid=0, iGen=0,
   dir.create(rdsout, recursive = T, showWarnings = F)
   
   obs=readRDS(file = 'Vauclin1979.RDS')
-  xobs = data.frame(x=obs[,1], z=2-obs[,2], col=obs[,3])
+  xobs = data.frame(x=obs[,1], z=obs[,2], col=obs[,3])
  
   gw=readout('eleygw')
   tid=time(gw)[1] + (seq(2, 8, 2)+0)*3600

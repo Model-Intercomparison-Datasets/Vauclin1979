@@ -57,10 +57,8 @@ dir.create(as.character(CV$method$PATH_OUT), showWarnings = FALSE, recursive = T
 file.copy(from='/Users/leleshu/Dropbox/SHUD/github/SHUD/Build/Products/Debug/shud', 
           to='./shud', overwrite=T)
 
-# debug(CMAES)
-# debug(Call_Model)
-# undebug(EXEC)
-sol1 <- CMAES(CV = CV, cmd ='./shud', Call_Model = Call_Model,  
+system('rm -rf cmaes_out')
+sol1 <- CMAES(CV = CV, cmd ='./shud', Call_Model = Call_Model,
               objfunc = Obj.Func, debug = FALSE)
 
 
